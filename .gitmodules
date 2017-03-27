@@ -1,0 +1,3 @@
+[submodule "Assets/PhysicalSky"]
+	path = Assets/PhysicalSky
+	url = https://github.com/MartinPalko/PhysicalSky.git
