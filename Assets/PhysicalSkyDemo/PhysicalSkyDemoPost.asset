@@ -83,17 +83,17 @@ MonoBehaviour:
       sampleCount: 6
       frameBlending: 0
   eyeAdaptation:
-    m_Enabled: 1
+    m_Enabled: 0
     m_Settings:
-      lowPercent: 25.722792
-      highPercent: 60.765915
-      minLuminance: -1
+      lowPercent: 24.002686
+      highPercent: 59.0458
+      minLuminance: -8
       maxLuminance: 1
-      keyValue: 0.25
+      keyValue: 10
       dynamicKeyValue: 1
       adaptationType: 0
-      speedUp: 2
-      speedDown: 1
+      speedUp: 5
+      speedDown: 2.5
       logMin: -11
       logMax: 2
   bloom:

@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 0
-  m_SkyboxMaterial: {fileID: 419435335}
+  m_SkyboxMaterial: {fileID: 1696097578}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -37,7 +37,8 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 389937469}
-  m_IndirectSpecularColor: {r: 0.4769767, g: 0.53456396, b: 0.50440884, a: 1}
+  m_IndirectSpecularColor: {r: 0.000048260004, g: 0.000034653232, b: 0.000027562462,
+    a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -267,13 +268,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 340356499}
-  m_LocalRotation: {x: -0, y: 0.98605525, z: -0, w: 0.16641872}
-  m_LocalPosition: {x: -4.8, y: 1.18, z: 2.76}
+  m_LocalRotation: {x: -0.23108433, y: 0.08601549, z: 0.020514695, w: 0.96890694}
+  m_LocalPosition: {x: -4.01, y: 1.16, z: -5.24}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 160.841, z: 0}
+  m_LocalEulerAnglesHint: {x: -26.829, y: 10.146001, z: 0}
 --- !u!114 &340356506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,11 +321,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sunBrightnessMultiplier: 1
   sunSaturationMultiplier: 1
-  skyExposure: 20.84
-  altitude: 0.1
+  skyExposure: 20
+  altitude: 0
   atmosphere: {fileID: 11400000, guid: 8cac46360eac44848839e228a257475d, type: 2}
+  starBrightnessMultiplier: 5
+  starBrightnessPower: 0.45
+  starMap: {fileID: 11400000, guid: e03000bea78847345bc7dbdb8724eaf9, type: 2}
   skyShader: {fileID: 4800000, guid: cd17161c79d920045bbbd9f7c5df52aa, type: 3}
   sunRadianceShader: {fileID: 4800000, guid: 19d7a9db099b2504a94dc22631c54094, type: 3}
+  starMeshShader: {fileID: 4800000, guid: ab12a6dd16ac5444e8dc5a89c70698ee, type: 3}
 --- !u!108 &389937469
 Light:
   m_ObjectHideFlags: 0
@@ -334,8 +339,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 7
   m_Type: 1
-  m_Color: {r: 1, g: 0.8896944, b: 0.60957426, a: 0.00027604165}
-  m_Intensity: 0.99689585
+  m_Color: {r: 1, g: 1, b: 1, a: 0.0014722222}
+  m_Intensity: 0
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -365,13 +370,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 389937467}
-  m_LocalRotation: {x: 0.10450544, y: -0, z: -0, w: 0.99452436}
+  m_LocalRotation: {x: -0.436171, y: -0, z: -0, w: 0.89986384}
   m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 11.997001, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -51.72, y: 0, z: 0}
 --- !u!114 &389937471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -403,24 +408,7 @@ MonoBehaviour:
   longitude: -73.5673
   minutesPerHour: 10
   sunsetSpeedMultiplier: 0.2
-  nightSpeedMultiplier: 10
---- !u!21 &419435335
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_Name: Custom/Skybox-PhysicalSky_Dynamic
-  m_Shader: {fileID: 4800000, guid: cd17161c79d920045bbbd9f7c5df52aa, type: 3}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  m_SavedProperties:
-    serializedVersion: 2
-    m_TexEnvs: []
-    m_Floats: []
-    m_Colors: []
+  nightSpeedMultiplier: 1
 --- !u!1 &447631643
 GameObject:
   m_ObjectHideFlags: 0
@@ -582,6 +570,75 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1036215859}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &905315469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 905315471}
+  - component: {fileID: 905315470}
+  m_Layer: 0
+  m_Name: Light Probe Group
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!220 &905315470
+LightProbeGroup:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 905315469}
+  m_Enabled: 1
+  m_SourcePositions:
+  - {x: 1.0381508, y: -0.8208065, z: 1}
+  - {x: 1.0381508, y: -0.8208065, z: -1}
+  - {x: 1.0381508, y: -2.8208065, z: 1}
+  - {x: 1.0381508, y: -2.8208065, z: -1}
+  - {x: -0.96184945, y: -0.8208065, z: 1}
+  - {x: -0.96184945, y: -0.8208065, z: -1}
+  - {x: -0.96184945, y: -2.8208065, z: 1}
+  - {x: -0.96184945, y: -2.8208065, z: -1}
+  - {x: -4.395814, y: -0.8208065, z: 1}
+  - {x: -4.395814, y: -0.8208065, z: -1}
+  - {x: -4.395814, y: -2.8208065, z: 1}
+  - {x: -4.395814, y: -2.8208065, z: -1}
+  - {x: 4.681016, y: -0.8208065, z: 1}
+  - {x: 4.681016, y: -0.8208065, z: -1}
+  - {x: 4.681016, y: -2.8208065, z: 1}
+  - {x: 4.681016, y: -2.8208065, z: -1}
+  - {x: 1.0381508, y: -0.8208065, z: -4.638532}
+  - {x: 1.0381508, y: -2.8208065, z: -4.638532}
+  - {x: -0.96184945, y: -0.8208065, z: -4.638532}
+  - {x: -0.96184945, y: -2.8208065, z: -4.638532}
+  - {x: -4.395814, y: -0.8208065, z: -4.638532}
+  - {x: -4.395814, y: -2.8208065, z: -4.638532}
+  - {x: 4.681016, y: -0.8208065, z: -4.638532}
+  - {x: 4.681016, y: -2.8208065, z: -4.638532}
+  - {x: 1.0381508, y: -0.8208065, z: 4.515087}
+  - {x: 1.0381508, y: -2.8208065, z: 4.515087}
+  - {x: -0.96184945, y: -0.8208065, z: 4.515087}
+  - {x: -0.96184945, y: -2.8208065, z: 4.515087}
+  - {x: -4.395814, y: -0.8208065, z: 4.515087}
+  - {x: -4.395814, y: -2.8208065, z: 4.515087}
+  - {x: 4.681016, y: -0.8208065, z: 4.515087}
+  - {x: 4.681016, y: -2.8208065, z: 4.515087}
+--- !u!4 &905315471
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 905315469}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 3, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &952000924
 GameObject:
@@ -751,9 +808,26 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695640927}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.901, z: 0}
+  m_LocalPosition: {x: 0, y: 2.42, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!21 &1696097578
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Custom/Skybox-PhysicalSky_Dynamic
+  m_Shader: {fileID: 4800000, guid: cd17161c79d920045bbbd9f7c5df52aa, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  m_SavedProperties:
+    serializedVersion: 2
+    m_TexEnvs: []
+    m_Floats: []
+    m_Colors: []
