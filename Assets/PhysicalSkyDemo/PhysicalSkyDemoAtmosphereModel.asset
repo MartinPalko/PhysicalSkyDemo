@@ -11,17 +11,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba4e1728e78faa45a91181e69388531, type: 3}
   m_Name: PhysicalSkyDemoAtmosphereModel
   m_EditorClassIdentifier: 
-  constantSolarIrradiance: 1.5
-  sunAngularRadius: 0.00872665
-  planetaryRadius: 6360000
-  atmosphereThickness: 60000
-  rayleigh: 0.00000124062
-  rayleighScaleHeight: 8000
-  mieScaleHeight: 1200
-  mieAngstromAlpha: 0
-  mieAngstromBeta: 0.005328
-  mieSingleScatteringAlbedo: 0.9
-  miePhaseFunctionG: 0.8
-  groundAlbedo: 0.1
-  maxSunZenithAngle: 1.7802359
-  PrecomputeShader: {fileID: 4800000, guid: c3812fd1f0a67c140b33e41c8f9d4b81, type: 3}
+  m_constantSolarIrradiance: 1.5
+  m_sunAngularRadius: 0.00872665
+  m_planetaryRadius: 6360000
+  m_atmosphereThickness: 60000
+  m_rayleigh: 0.00000124062
+  m_rayleighScaleHeight: 8000
+  m_mieScaleHeight: 1200
+  m_mieAngstromAlpha: 0
+  m_mieAngstromBeta: 0.005328
+  m_mieSingleScatteringAlbedo: 0.9
+  m_miePhaseFunctionG: 0.8
+  m_groundAlbedo: 0.1
+  m_maxSunZenithAngle: 1.7802359
+  m_PrecomputeShader: {fileID: 4800000, guid: c3812fd1f0a67c140b33e41c8f9d4b81, type: 3}

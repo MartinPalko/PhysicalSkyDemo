@@ -31,7 +31,7 @@ MonoBehaviour:
   antialiasing:
     m_Enabled: 1
     m_Settings:
-      method: 1
+      method: 0
       fxaaSettings:
         preset: 4
       taaSettings:
@@ -83,11 +83,11 @@ MonoBehaviour:
       sampleCount: 6
       frameBlending: 0
   eyeAdaptation:
-    m_Enabled: 0
+    m_Enabled: 1
     m_Settings:
       lowPercent: 24.002686
       highPercent: 59.0458
-      minLuminance: -8
+      minLuminance: -4
       maxLuminance: 1
       keyValue: 10
       dynamicKeyValue: 1
@@ -95,7 +95,7 @@ MonoBehaviour:
       speedUp: 5
       speedDown: 2.5
       logMin: -11
-      logMax: 2
+      logMax: 1
   bloom:
     m_Enabled: 1
     m_Settings:

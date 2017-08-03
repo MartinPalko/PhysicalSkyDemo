@@ -68,9 +68,22 @@ namespace PhysicalSky
 
             double sunAltitude;
             double sunAzimuth;
-            SunPosition.CalculateSunPosition(time, latitude, longitude, out sunAltitude, out sunAzimuth);
 
+            SunPosition.CalculateSunPosition(time, latitude, longitude, out sunAltitude, out sunAzimuth);
             sky.SunDirection = CartesianCoords.SphericalToCartesian((float)sunAzimuth, (float)sunAltitude);
+            //sky.SunDirection = new CelestialCoordinates.HorizontalCoords(sunAzimuth * Mathf.Deg2Rad, sunAltitude * Mathf.Deg2Rad).ToVector3();
+
+            // Create a quaternion for the star rotation.
+            CelestialCoordinates.GeographicCoords observerLocation = new CelestialCoordinates.GeographicCoords(latitude * Mathf.Deg2Rad, longitude * Mathf.Deg2Rad);
+            CelestialCoordinates.CartesianCoords starForward = CelestialCoordinates.Utility.EquitorialToHorizontal(new CelestialCoordinates.EquitorialCoords(0.0, 0.0), observerLocation, time);
+            CelestialCoordinates.CartesianCoords starUp = CelestialCoordinates.Utility.EquitorialToHorizontal(new CelestialCoordinates.EquitorialCoords(0.0, 90.0), observerLocation, time);
+
+            Vector3 lookVector = starForward.ToVector3();
+            Vector3 upVector = starUp.ToVector3();
+            lookVector = new Vector3(lookVector.x, lookVector.z, lookVector.y);
+            upVector = new Vector3(upVector.x, upVector.z, upVector.y);
+
+            sky.StarRotation = Quaternion.LookRotation(lookVector, upVector);
         }
 
     }
