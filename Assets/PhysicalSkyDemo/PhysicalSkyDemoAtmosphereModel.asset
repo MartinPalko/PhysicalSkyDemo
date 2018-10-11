@@ -3,7 +3,7 @@
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
@@ -11,6 +11,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3ba4e1728e78faa45a91181e69388531, type: 3}
   m_Name: PhysicalSkyDemoAtmosphereModel
   m_EditorClassIdentifier: 
+  m_scatteringOrders: 4
+  m_luminance: 2
+  m_useOzone: 1
+  m_useConstantSolarSpectrum: 0
   m_constantSolarIrradiance: 1.5
   m_sunAngularRadius: 0.00872665
   m_planetaryRadius: 6360000

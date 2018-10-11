@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 1621313748}
+  m_SkyboxMaterial: {fileID: 1260977049}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -313,7 +313,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 15
-  field of view: 60
+  field of view: 90
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -337,13 +337,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 340356499}
-  m_LocalRotation: {x: -0.23108433, y: 0.08601549, z: 0.020514695, w: 0.96890694}
-  m_LocalPosition: {x: -4.01, y: 1.16, z: -5.24}
+  m_LocalRotation: {x: -0.14223503, y: -0, z: -0, w: 0.989833}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -26.829, y: 10.146001, z: 0}
+  m_LocalEulerAnglesHint: {x: -16.354, y: 0, z: 0}
 --- !u!114 &340356506
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -370,6 +370,7 @@ GameObject:
   - component: {fileID: 389937468}
   - component: {fileID: 389937471}
   - component: {fileID: 389937472}
+  - component: {fileID: 389937473}
   m_Layer: 0
   m_Name: PhysicalSky
   m_TagString: Untagged
@@ -394,7 +395,7 @@ MonoBehaviour:
   m_SkyExposure: 20
   m_Altitude: 0.1
   m_Atmosphere: {fileID: 11400000, guid: 8cac46360eac44848839e228a257475d, type: 2}
-  m_StarBrightnessMultiplier: 1
+  m_StarBrightnessMultiplier: 0.1
   m_StarBrightnessPower: 0.454545
   m_StarMap: {fileID: 11400000, guid: e03000bea78847345bc7dbdb8724eaf9, type: 2}
   m_SkyShader: {fileID: 4800000, guid: cd17161c79d920045bbbd9f7c5df52aa, type: 3}
@@ -409,8 +410,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 1
-  m_Color: {r: 1, g: 0.9284183, b: 0.7107944, a: 1}
-  m_Intensity: 1.080625
+  m_Color: {r: 0.7900417, g: 0.93424785, b: 1, a: 1}
+  m_Intensity: 0.000007715861
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -443,13 +444,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 389937467}
-  m_LocalRotation: {x: 0.1612396, y: -0, z: -0, w: 0.9869153}
+  m_LocalRotation: {x: 0.0000304612, y: 0.99995583, z: -0.0034905185, w: 0.008726455}
   m_LocalPosition: {x: 0, y: 4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 18.558, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -4.1980004, y: -138.947, z: -14.080001}
 --- !u!114 &389937471
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -463,7 +464,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   latitude: 45.5017
   longitude: -73.5673
-  minutesPerHour: 60
+  minutesPerHour: 10
   sunsetSpeedMultiplier: 0.1
   nightSpeedMultiplier: 10
 --- !u!114 &389937472
@@ -482,6 +483,19 @@ MonoBehaviour:
   minutesPerHour: 10
   sunsetSpeedMultiplier: 0.4
   nightSpeedMultiplier: 1
+--- !u!114 &389937473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 389937467}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e260489a41892942b1bb4eb9fa5128c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sunAzimuth: 91
+  sunAltitude: 0.4
 --- !u!1 &447631643
 GameObject:
   m_ObjectHideFlags: 0
@@ -896,7 +910,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!21 &1621313748
+--- !u!21 &1260977049
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
